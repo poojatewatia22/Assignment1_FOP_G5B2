@@ -26,7 +26,7 @@ import com.glearning.depart.model.SuperDepartment;
 			return  getWorkDeadline;
 		}
 
-		@Override
+		
 		public	String doActivity() {
 			String doActivity = "team lunch";
 			return  doActivity;
