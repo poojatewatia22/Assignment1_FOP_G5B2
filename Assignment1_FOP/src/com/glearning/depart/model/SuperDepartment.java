@@ -1,22 +1,35 @@
-package com.glearning.depart.model;
-//Base class or superclass
+package com.glearning.groupAssignment1.model;
+
 public class SuperDepartment {
-	
- 	public String departmentName() {
- 		 String departmentName = "super Department";
- 	      return departmentName;
-	}
-	
- 	 public	String getTodaysWork() {
- 		 String getTodaysWork = "no work as of now";
- 		 return getTodaysWork;
- 	 }
- 	public  String getWorkDeadline() {
-		 String getWorkDeadLine = "Nil";
-		 return getWorkDeadLine;  
-	 }
- 	public String isTodayAHoliday() {
-		  String isTodayAHoliday = "Today is not a holiday";
-	       return isTodayAHoliday;
-	}}
-	
+
+    protected String departmentName;
+    protected String todayWork;
+    protected String workDeadline;
+    protected String isTodayHoliday;
+    protected String day;
+
+
+    public SuperDepartment(String departmentName) {
+        this.departmentName = departmentName;
+
+
+
+    }
+
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public String getTodayWork() {
+        return todayWork;
+    }
+
+    public String getWorkDeadline() {
+        return workDeadline;
+    }
+
+    public String isTodayHoliday() {
+
+        return "Today is not a Holiday";
+    }
+}
