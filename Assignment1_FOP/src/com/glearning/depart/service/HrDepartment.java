@@ -1,35 +1,28 @@
-package com.glearning.depart.service;
+package com.glearning.groupAssignment1.service;
 
-import com.glearning.depart.model.SuperDepartment;
+import com.glearning.groupAssignment1.model.SuperDepartment;
 
-//inherited or subclass
-    
-	public  class  HrDepartment extends SuperDepartment{
+public class HRDepartment extends SuperDepartment {
+    public HRDepartment(String departmentName) {
+        super(departmentName);
+    }
 
-		@Override
-		public	String departmentName() {
-			
-		String departmentName ="Hr Department";
-			return departmentName;
-		}
+    @Override
+    public String getDepartmentName() {
+        return this.departmentName;
+    }
 
-		@Override
-		public	String getTodaysWork() {
-			String getTodaysWork = " Fill today’s timesheet and mark your attendance";
-				
-			return getTodaysWork;
-		}
+    @Override
+    public String getTodayWork() {
+        return "Team Lunch";
+    }
 
-		@Override
-		public	String getWorkDeadline() {
-			String getWorkDeadline ="Complete by EOD ";
-			return  getWorkDeadline;
-		}
+    @Override
+    public String getWorkDeadline() {
+        return "complete by EOD";
+    }
 
-		
-		public	String doActivity() {
-			String doActivity = "team lunch";
-			return  doActivity;
-		}}
-
-
+    public String doActivity(){
+        return "Fill today's timesheet and mark your attendance";
+    }
+}
