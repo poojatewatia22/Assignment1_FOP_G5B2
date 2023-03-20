@@ -1,49 +1,36 @@
-package com.glearning.depart.client;
+package com.glearning.groupAssignment1.client;
 
-import com.glearning.depart.service.TechDepartment;
-import com.glearning.depart.model.SuperDepartment;
-import com.glearning.depart.service.AdminDepartment;
-import com.glearning.depart.service.HrDepartment;
-//Driver class
-public class Main {
-	public static void main(String[] args) {
-		//creating object or instance
-		SuperDepartment obj = new SuperDepartment();//creating an object of super department
-		AdminDepartment obj1 = new AdminDepartment();//creating an object of admin department
-		HrDepartment obj2 = new HrDepartment();//creating an object of hr department
-		TechDepartment obj3 = new TechDepartment();//creating an object of tech department
-		//method calling to super department 
-		System.out.println("Welcome to "+obj.departmentName());
-		System.out.println(obj.getTodaysWork());
-		System.out.println(obj.getWorkDeadline());
-		System.out.println(obj.isTodayAHoliday());
-		
-		System.out.println();
-		
-		//method calling to admin department
-		System.out.println("Welcome to "+obj1.departmentName());
-		System.out.println(obj1.getTodaysWork());
-		System.out.println(obj1.getWorkDeadline());
-		
-		System.out.println();
-		//method calling to hr department
-		System.out.println("Welcome to "+obj2.departmentName());
-		System.out.println(obj2.getTodaysWork());
-		System.out.println(obj2.getWorkDeadline());
-		System.out.println(obj2.doActivity());
-		
-		System.out.println();
-		//method calling tech department
-		System.out.println("Welcome to "+obj3.departmentName());
-		System.out.println(obj3.getTodaysWork());
-		System.out.println(obj3.getWorkDeadline());
-		System.out.println(obj3.getTechStackInformation());
-		
-		
-		
-		
-		
-		
-		
-}
+import com.glearning.groupAssignment1.model.SuperDepartment;
+import com.glearning.groupAssignment1.service.AdminDepartment;
+import com.glearning.groupAssignment1.service.HRDepartment;
+import com.glearning.groupAssignment1.service.TechDepartment;
+
+public class Client {
+    public static void main(String[] args) {
+        SuperDepartment superDepartment = new SuperDepartment("Super") ;
+        AdminDepartment adminDepartment = new AdminDepartment("Admin");
+        System.out.println("Welocome to " + adminDepartment.getDepartmentName() + " Department");
+        System.out.println(adminDepartment.getTodayWork());
+        System.out.println(adminDepartment.getWorkDeadline());
+        System.out.println(superDepartment.isTodayHoliday());
+        System.out.println("-".repeat(40));
+
+        HRDepartment hrDepartment = new HRDepartment("HR");
+        System.out.println("Welcome to "+ hrDepartment.getDepartmentName() + " Department");
+        System.out.println(hrDepartment.getTodayWork());
+        System.out.println(hrDepartment.doActivity());
+        System.out.println(hrDepartment.getWorkDeadline());
+        System.out.println(superDepartment.isTodayHoliday());
+        System.out.println("-".repeat(40));
+
+        TechDepartment techDepartment = new TechDepartment("Tech");
+        System.out.println("Welcome to  " + techDepartment.getDepartmentName() + " Department");
+        System.out.println(techDepartment.getTodayWork());
+        System.out.println(techDepartment.getWorkDeadline());
+        System.out.println(techDepartment.getTechStackInformation());
+        System.out.println(superDepartment.isTodayHoliday());
+        System.out.println("-".repeat(40));
+
+
+    }
 }
