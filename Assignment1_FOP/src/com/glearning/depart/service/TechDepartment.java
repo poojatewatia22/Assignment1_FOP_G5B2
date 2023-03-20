@@ -23,7 +23,7 @@ import com.glearning.depart.model.SuperDepartment;
 				return getWorkDeadline;
 			}
 
-			@Override
+			
 			public String getTechStackInformation() {
 				String getTechStackInformation = "core java";
 				return getTechStackInformation ;
